@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Dashboard - Personal Expense Tracker</title>
+
+   <link rel="stylesheet" href="dashboard.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            Expense<span>Tracker</span>
+        </div>
+
+        <div class="nav-links">
+            <a href="dashboard.html">Dashboard</a>
+            <a href="expenses.html">Expenses</a>
+            <a href="categories.html">Categories</a>
+            <a href="budget.html">Budget</a>
+            <a href="reports.html">Reports</a>
+
+            <button class="logout-btn" onclick="logout()">
+                Logout
+            </button>
+        </div>
+
+    </nav>
+
+
+    <!-- MAIN CONTENT -->
+
+    <main class="container">
+
+        <!-- WELCOME -->
+
+        <section class="welcome">
+
+            <h1>Welcome, Siddharth!</h1>
+
+            <p>
+                Here's an overview of your finances for this month.
+            </p>
+
+        </section>
+
+
+        <!-- SUMMARY -->
+
+        <section class="summary">
+
+            <div class="card">
+
+                <h3>Total Income</h3>
+
+                <h2>₹50,000</h2>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Total Expenses</h3>
+
+                <h2>₹32,500</h2>
+
+            </div>
+
+
+            <div class="card">
+
+                <h3>Savings</h3>
+
+                <h2>₹17,500</h2>
+
+            </div>
+
+        </section>
+
+
+        <!-- QUICK ACTIONS -->
+
+        <section>
+
+            <h2 class="section-title">
+                Quick Actions
+            </h2>
+
+            <div class="actions">
+
+                <button
+                    class="action-btn"
+                    onclick="addExpense()">
+                    + Add Expense
+                </button>
+
+                <button
+                    class="action-btn"
+                    onclick="addIncome()">
+                    + Add Income
+                </button>
+
+                <button
+                    class="action-btn"
+                    onclick="setBudget()">
+                    + Set Budget
+                </button>
+
+            </div>
+
+        </section>
+
+
+        <!-- RECENT EXPENSES + BUDGET -->
+
+        <section class="content-grid">
+
+
+            <!-- RECENT EXPENSES -->
+
+            <div class="table-container">
+
+                <h2 class="section-title">
+                    Recent Expenses
+                </h2>
+
+                <table>
+
+                    <thead>
+
+                        <tr>
+                            <th>Date</th>
+                            <th>Category</th>
+                            <th>Description</th>
+                            <th>Amount</th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+
+                        <tr>
+                            <td>01/09/2026</td>
+                            <td>Food</td>
+                            <td>Lunch</td>
+                            <td>₹250</td>
+                        </tr>
+
+                        <tr>
+                            <td>01/09/2026</td>
+                            <td>Travel</td>
+                            <td>Bus</td>
+                            <td>₹50</td>
+                        </tr>
+
+                        <tr>
+                            <td>31/08/2026</td>
+                            <td>Shopping</td>
+                            <td>Clothes</td>
+                            <td>₹1,500</td>
+                        </tr>
+
+                        <tr>
+                            <td>30/08/2026</td>
+                            <td>Food</td>
+                            <td>Dinner</td>
+                            <td>₹500</td>
+                        </tr>
+
+                    </tbody>
+
+                </table>
+
+            </div>
+
+
+            <!-- BUDGET -->
+
+            <div class="budget-container">
+
+                <h2 class="section-title">
+                    Monthly Budget
+                </h2>
+
+
+                <div class="budget-item">
+
+                    <div class="budget-info">
+                        <span>Food</span>
+                        <span>₹3,250 / ₹5,000</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="budget-item">
+
+                    <div class="budget-info">
+                        <span>Travel</span>
+                        <span>₹1,500 / ₹3,000</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar travel"></div>
+                    </div>
+
+                </div>
+
+
+                <div class="budget-item">
+
+                    <div class="budget-info">
+                        <span>Shopping</span>
+                        <span>₹2,800 / ₹4,000</span>
+                    </div>
+
+                    <div class="progress">
+                        <div class="progress-bar shopping"></div>
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+        <p>Personal Expense Tracker © 2026</p>
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+
+    <script>
+
+        function addExpense() {
+            window.location.href = "expenses.html";
+        }
+
+        function addIncome() {
+            alert("Add Income page will be available soon.");
+        }
+
+        function setBudget() {
+            window.location.href = "budget.html";
+        }
+
+        function logout() {
+
+            let confirmLogout = confirm(
+                "Are you sure you want to logout?"
+            );
+
+            if (confirmLogout) {
+                window.location.href = "login.html";
+            }
+
+        }
+
+    </script>
+
+</body>
+</html>
+
