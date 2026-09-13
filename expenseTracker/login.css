@@ -1,0 +1,174 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    min-height: 100vh;
+    background-color: #111111;
+    color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 30px;
+}
+
+/* LOGIN CONTAINER */
+
+.login-container {
+    width: 100%;
+    max-width: 430px;
+
+    background-color: #1b1b1b;
+
+    border: 1px solid #333;
+    border-radius: 18px;
+
+    padding: 45px;
+
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.5);
+}
+
+
+/* HEADING */
+
+.login-container h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.login-container > p {
+    color: #888;
+    margin-bottom: 30px;
+    font-size: 15px;
+}
+
+
+/* FORM */
+
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 14px;
+    color: #ccc;
+
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    width: 100%;
+
+    padding: 13px 14px;
+
+    background-color: #252525;
+
+    border: 1px solid #3a3a3a;
+    border-radius: 8px;
+
+    color: white;
+
+    font-size: 14px;
+
+    outline: none;
+}
+
+.form-group input:focus {
+    border-color: #8ee28e;
+}
+
+.form-group input::placeholder {
+    color: #666;
+}
+
+
+/* ERROR MESSAGE */
+
+.error {
+    color: #ff6b6b;
+
+    font-size: 12px;
+
+    margin-top: 5px;
+}
+
+
+/* LOGIN BUTTON */
+
+.login-btn {
+    width: 100%;
+
+    padding: 14px;
+
+    margin-top: 8px;
+
+    border: none;
+    border-radius: 8px;
+
+    background-color: #8ee28e;
+
+    color: #111;
+
+    font-size: 16px;
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #76c976;
+}
+
+
+/* REGISTER LINK */
+
+.register-link {
+    text-align: center;
+
+    margin-top: 22px;
+
+    color: #888;
+
+    font-size: 14px;
+}
+
+.register-link a {
+    color: #8ee28e;
+
+    text-decoration: none;
+
+    font-weight: bold;
+}
+
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+
+/* RESPONSIVE */
+
+@media (max-width: 500px) {
+
+    body {
+        padding: 15px;
+    }
+
+    .login-container {
+        padding: 30px 25px;
+    }
+
+    .login-container h1 {
+        font-size: 28px;
+    }
+
+}
